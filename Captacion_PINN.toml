@@ -1,0 +1,46 @@
+name = "Captación de Agua · PINN"
+color = "teal"
+
+[[panes]]
+id = "root"
+split = "horizontal"
+children = ["claude", "derecha"]
+
+# Agente principal (Claude Code) — orquesta y delega en los subagentes
+[[panes]]
+id = "claude"
+type = "terminal"
+directory = "~/Documents/captacion-agua-atmosferica-pinn"
+commands = ["claude --permission-mode default"]
+is_focused = true
+
+[[panes]]
+id = "derecha"
+split = "vertical"
+children = ["jupyter", "monitor"]
+
+# Cuadernos: física, datos, PINN, validación
+[[panes]]
+id = "jupyter"
+type = "terminal"
+directory = "~/Documents/captacion-agua-atmosferica-pinn"
+commands = ["jupyter lab"]
+
+[[panes]]
+id = "monitor"
+split = "horizontal"
+children = ["gpu", "shell"]
+
+# Monitor de GPU (CUDA) durante el entrenamiento
+[[panes]]
+id = "gpu"
+type = "terminal"
+directory = "~/Documents/captacion-agua-atmosferica-pinn"
+commands = ["nvidia-smi -l 2"]
+
+# Git / estado del repo
+[[panes]]
+id = "shell"
+type = "terminal"
+directory = "~/Documents/captacion-agua-atmosferica-pinn"
+commands = ["git status", "git pull"]

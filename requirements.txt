@@ -1,0 +1,10 @@
+# Dependencias tentativas (fijar versiones al implementar)
+numpy
+scipy
+pandas
+matplotlib
+jupyterlab
+# Para la PINN (elegir uno al implementar):
+# torch
+# deepxde
+scikit-learn

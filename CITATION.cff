@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+title: "De la capilaridad a la inferencia: laboratorio reproducible de captación de agua atmosférica con PINN"
+message: "Si usas este material, por favor cítalo."
+authors:
+  - family-names: "Muñoz Robles"
+    given-names: "Jalil"
+license: MIT
